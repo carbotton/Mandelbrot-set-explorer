@@ -5,7 +5,7 @@ import math
 import time
 import random
 from tkinter import *
-from PIL import Image, ImageTk
+from pil import Image, ImageTk
 from mandelbrot import Mandelbrot
 
 
@@ -134,4 +134,8 @@ def main():
     master.geometry("{}x{}".format(render.canvasW, render.canvasH))
     master.mainloop()
 
-main()
+if __name__ == '__main__':
+    from multiprocessing import freeze_support
+
+    freeze_support()
+    main()
